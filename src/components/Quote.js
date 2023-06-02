@@ -8,20 +8,27 @@ const Quote = ({ category }) => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    // make the HTTP request to the API
-    const url = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        // update the state with the first quote
-        setQuote(data[0].quote);
-        setLoading(true);
-        setError(true);
-      })
-      .catch(() => {
+    const fetchQuote = async () => {
+      try {
+        const url = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
+        const response = await fetch(url, {
+          headers: {
+            'X-Api-Key': '647a531e06f737362c987227',
+          },
+        });
+        const data = await response.json();
+        if (data.length > 0) {
+          setQuote(data[0].quote);
+        }
+
         setLoading(true);
         setError(false);
-      });
+      } catch (error) {
+        setLoading(true);
+        setError(true);
+      }
+    };
+    fetchQuote();
   }, [category]);
 
   if (loading) {
