@@ -10,11 +10,11 @@ const Quote = ({ category }) => {
   useEffect(() => {
     const fetchQuote = async () => {
       try {
-        const url = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
+        const url = 'https://api.api-ninjas.com/v1/quotes';
+        const keys = 'jfYJ9oiiC8l85e8Eyz77XQ==PW5czDrSlFjfWpmA';
         const response = await fetch(url, {
-          headers: {
-            'X-Api-Key': '647a531e06f737362c987227',
-          },
+          headers: { 'X-Api-Key': keys },
+          contentType: 'application/json',
         });
         const data = await response.json();
         if (data.length > 0) {
