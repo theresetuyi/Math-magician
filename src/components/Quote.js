@@ -11,7 +11,7 @@ const Quote = ({ category }) => {
     const fetchQuote = async () => {
       try {
         const url = 'https://api.api-ninjas.com/v1/quotes';
-        const keys = 'jfYJ9oiiC8l85e8Eyz77XQ==PW5czDrSlFjfWpmA';
+        const keys = 'b1PZcSwRaKAwryutCkkH2A==lVNi0KrhEV3io1wO';
         const response = await fetch(url, {
           headers: { 'X-Api-Key': keys },
           contentType: 'application/json',
@@ -21,10 +21,10 @@ const Quote = ({ category }) => {
           setQuote(data[0].quote);
         }
 
-        setLoading(true);
-        setError(false);
+        setLoading(false);
+        setError(true);
       } catch (error) {
-        setLoading(true);
+        setLoading(false);
         setError(true);
       }
     };
