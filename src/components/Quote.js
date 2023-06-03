@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Calculator from './Calculator';
 
 const Quote = ({ category }) => {
   const [quote, setQuote] = useState('');
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
   useEffect(() => {
@@ -22,10 +21,10 @@ const Quote = ({ category }) => {
         }
 
         setLoading(false);
-        setError(true);
+        setError(false);
       } catch (error) {
         setLoading(false);
-        setError(true);
+        setError(false);
       }
     };
     fetchQuote();
@@ -42,7 +41,7 @@ const Quote = ({ category }) => {
   return (
     <div>
       <p>{quote}</p>
-      <Calculator />
+
     </div>
   );
 };
