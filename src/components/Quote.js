@@ -9,6 +9,7 @@ const Quote = ({ category }) => {
   useEffect(() => {
     const fetchQuote = async () => {
       try {
+        setLoading(true);
         const url = 'https://api.api-ninjas.com/v1/quotes';
         const keys = 'b1PZcSwRaKAwryutCkkH2A==lVNi0KrhEV3io1wO';
         const response = await fetch(url, {
@@ -21,9 +22,7 @@ const Quote = ({ category }) => {
         }
 
         setLoading(false);
-        setError(false);
       } catch (error) {
-        setLoading(false);
         setError(false);
       }
     };
