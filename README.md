@@ -62,7 +62,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Live Demo Link soon
+- Live Demo Link https://math-magician-siiw.onrender.com
 
 ### Prerequisites
 
