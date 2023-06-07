@@ -5,7 +5,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(to top, #636909 0%, #442906 100%);
+  background-image: linear-gradient(to top, #7b7a7e 0%, #a56c21 100%);
   overflow-y: hidden;
 }
 
@@ -28,38 +28,9 @@ body {
   justify-content: center;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  width: 30vw;
-  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
-}
-
-.calc-btn {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 1px;
-}
-
-input {
-  height: 7vh;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-}
-
 input::placeholder {
   color: #fff;
   opacity: 1;
-}
-
-input:hover {
-  filter: brightness(90%);
-}
-
-.zero {
-  grid-column: 1 / span 2;
 }
 
 .number {
@@ -67,10 +38,6 @@ input:hover {
   background-color: #858694;
   color: #fff;
   font-size: large;
-}
-
-.sign {
-  background-color: #f5913e;
 }
 
 .section {
