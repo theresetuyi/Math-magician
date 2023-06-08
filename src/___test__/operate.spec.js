@@ -9,7 +9,7 @@ describe('Tests for: Operatation + ', () => {
 
 describe('Tests for: Operatation - ', () => {
   it('shoule  2 - 1  and return 1', () => {
-    const answer = operate('2', '1', '-' );
+    const answer = operate('2', '1', '-');
     expect(answer).toBe('1');
   });
 });
