@@ -19,7 +19,7 @@ function Calculator() {
   return (
     <div>
       <div className="header">Lets do some Math!</div>
-      <form action="#">
+      <form action="#" className="calc-box">
         <div className="text">{result || '0'}</div>
         <div className="calc-btn">
           <input type="button" value="AC" onClick={clickListener} />
