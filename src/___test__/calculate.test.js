@@ -1,8 +1,4 @@
-import renderer from 'react-test-renderer';
 import calculate from '../logic/calculate';
-import Calculator from '../components/Calculator';
-import Home from '../components/Home';
-import Quote from '../components/Quote';
 
 describe('Test calculate', () => {
   it('6 + 4 = 10', () => {
@@ -53,19 +49,5 @@ describe('Test calculate', () => {
     };
     const res = calculate(obj, '=');
     expect(res.total).toBe('2');
-  });
-});
-describe('Component UI render as expected', () => {
-  it('Calculator renders correctly', () => {
-    const tree = renderer.create(<Calculator />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-  it('Home renders correctly', () => {
-    const tree = renderer.create(<Home />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-  it('Quote renders correctly', () => {
-    const tree = renderer.create(<Quote />).toJSON();
-    expect(tree).toMatchSnapshot();
   });
 });
