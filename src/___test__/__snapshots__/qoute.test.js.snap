@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Creating Snapshot for Quote Quote should renders correctly 1`] = `
+<div
+  data-testId="quote-container"
+>
+  <p />
+</div>
+`;
